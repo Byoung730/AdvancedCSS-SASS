@@ -2,6 +2,22 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  .col1-of-2 {
+    width: calc((100% - #{$gutter-horizontal})/2);
+  }
+
+  .col1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal})/3);
+  }
+
+  .col1-of-4 {
+    width: calc((100% - 3 * #{$gutter-horizontal})/4);
+  }
+
+  .col2-of-3 {
+    width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+  }
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
   }
@@ -14,21 +30,5 @@
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
-  }
-
-  .col1-of-2 {
-    width: calc((100% - #{$gutter-horizontal})/2);
-  }
-
-  .col1-of-3 {
-    width: calc((100% - 2 * #{$gutter-horizontal})/3);
-  }
-
-  .col2-of-3 {
-    width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
-  }
-
-  .col1-of-4 {
-    width: calc((100% - 3 * #{$gutter-horizontal})/4);
   }
 }
