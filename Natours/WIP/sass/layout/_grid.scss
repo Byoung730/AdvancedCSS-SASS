@@ -8,6 +8,7 @@
 
   .col1-of-3 {
     width: calc((100% - 2 * #{$gutter-horizontal})/3);
+    padding: 0 1rem;
   }
 
   .col1-of-4 {
@@ -31,8 +32,4 @@
       margin-right: $gutter-horizontal;
     }
   }
-}
-
-.tour-row {
-  padding: 0 8rem;
 }
