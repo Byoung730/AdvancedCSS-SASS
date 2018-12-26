@@ -171,7 +171,7 @@ body {
   .card__side {
     background-color: orangered;
     height: 50rem;
-    transition: all .8s;
+    transition: all .8s ease;
     font-size: 2rem;
     color: #fff;
     position: absolute;
@@ -182,8 +182,13 @@ body {
     .card__side--front {
       background-color: orangered; }
     .card__side--back {
-      background-color: green;
       transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {

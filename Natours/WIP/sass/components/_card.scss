@@ -8,7 +8,7 @@
 
         background-color: orangered;
         height: 50rem;
-        transition: all .8s;
+        transition: all .8s ease;
         font-size: 2rem;
         color: #fff;
         position: absolute;
@@ -22,8 +22,19 @@
         }
 
         &--back {
-            background-color: green;
             transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.8), rgba($color-secondary-dark, 0.8));
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8));
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.8), rgba($color-tertiary-dark, 0.8));
+            }
         }
     }
 
