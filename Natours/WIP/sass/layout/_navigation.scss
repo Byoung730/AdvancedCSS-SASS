@@ -113,7 +113,9 @@
       content: "";
       position: absolute;
       left: 0;
-      transition: all .2s;
+
+      // transition not working properly
+      transition: all .2s ease-in-out;
     }
 
     &::before { top: -.8rem; }
@@ -122,10 +124,24 @@
   }
 
   &__button:hover &__icon::before {
-    top: -1rem;
+    transform: translateY(-.5rem);
   }
 
   &__button:hover &__icon::after {
-    top: 1rem;
+    transform: translateY(.5rem);
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 }
