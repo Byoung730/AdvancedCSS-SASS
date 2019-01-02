@@ -406,6 +406,25 @@ body {
 .form__radio-input:checked + .form__radio-label .form__radio-button::after {
   opacity: 1; }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 5000; }
+  .popup__content {
+    width: 75%;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all .5s .2s; }
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -602,7 +621,7 @@ body {
   transform: translateX(1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(80); }
+  transform: scale(100); }
 
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
@@ -620,7 +639,7 @@ body {
     content: "";
     position: absolute;
     left: 0;
-    transition: all .2s ease-in-out; }
+    transition: all .3s ease-in-out; }
   .navigation__icon::before {
     top: -.8rem; }
   .navigation__icon::after {
