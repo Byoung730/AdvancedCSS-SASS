@@ -12,8 +12,7 @@
     right: 6.5rem;
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 1000;
-    transition: transform .6s cubic-bezier(.71,.27,.38,.8);
-
+    transition: transform 0.6s cubic-bezier(.71,.27,.38,.8);
     // transform: scale(50);
   }
 
@@ -37,17 +36,13 @@
     top: 0;
     right: 0;
     z-index: 1005;
-
     opacity: 0;
     width: 0;
-    transition: all .6s cubic-bezier(.71,.27,.38,.8);
+    transition: all 0.6s cubic-bezier(.71,.27,.38,.8);
   }
 
   &__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include center;
     list-style: none;
     text-align: center;
     width: 100%;
@@ -95,30 +90,33 @@
   }
 
   &__icon {
-
     position: relative;
     margin-top: 3.25rem;
 
     &,
-    &:before,
-    &:after {
+    &:after,
+    &:before {
       width: 3rem;
       height: 2px;
       background-color: $color-gray-dark-3;
       display: inline-block;
     }
 
-    &::before,
-    &::after {
+    &::after,
+    &::before {
       content: "";
       position: absolute;
       left: 0;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
-    &::before { top: -.8rem; }
+    &::before {
+      top: -.8rem;
+    }
 
-    &::after { top: .8rem; }
+    &::after {
+      top: 0.8rem;
+    }
   }
 
   &__button:hover &__icon::before {
