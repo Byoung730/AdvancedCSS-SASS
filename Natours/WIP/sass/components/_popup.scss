@@ -8,7 +8,7 @@
   z-index: 5000;
   opacity: 0;
   visibility: hidden;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &__content {
     @include center;
@@ -20,12 +20,7 @@
     overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(.25);
-    transition: all .5s .2s;
-  }
-
-  &__target {
-    opacity: 1;
-    visibility: visible;
+    transition: all 0.5s 0.2s;
   }
 
   &__left {
@@ -60,6 +55,16 @@
     hyphens: auto;
   }
 
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
   &__close {
     &:link,
     &:visited {
@@ -70,6 +75,12 @@
       font-size: 3rem;
       text-decoration: none;
       display: inline-block;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-primary;
     }
   }
 }
