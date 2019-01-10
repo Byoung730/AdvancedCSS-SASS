@@ -26,13 +26,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+
 @mixin respond($breakpoint) {
     @if $breakpoint==phone {
         @media only screen and (max-width: 37.5em) {
             @content
         }
 
-        ; //600px
+        ;
     }
 
     @if $breakpoint==tab-port {
@@ -40,7 +41,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
             @content
         }
 
-        ; //900px
+        ;
     }
 
     @if $breakpoint==tab-land {
@@ -48,7 +49,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
             @content
         }
 
-        ; //1200px
+        ;
     }
 
     @if $breakpoint==big-desktop {
@@ -56,6 +57,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
             @content
         }
 
-        ; //1800
+        ;
     }
 }
